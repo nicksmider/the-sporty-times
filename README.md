@@ -20,5 +20,15 @@ yarn build
 yarn lint
 ```
 
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Deploy to Github Pages
+```
+yarn deploy
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
