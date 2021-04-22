@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row flex-wrap justify-around my-64">
+  <div class="flex flex-row flex-wrap justify-around my-16">
     <div
       class="my-2 cursor-pointer hover:bg-gray-100 rounded"
       v-for="user of users"
