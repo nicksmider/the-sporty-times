@@ -10,7 +10,7 @@
         </div>
       </div>
       <div
-        class="self-end h-16 lg:h-8 text-xs	flex flex-wrap  justify-end w-full z-20 text-gray-600 hover:text-gray-900"
+        class="self-end h-16 lg:h-8 text-xs	flex flex-wrap  justify-end w-full text-gray-600 hover:text-gray-900"
       >
         <div
           v-for="item of followingItems"

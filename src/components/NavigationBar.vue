@@ -95,11 +95,17 @@
             class="p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 hidden"
           >
             <li
+              v-for="item in dropDownItems"
+              :key="item.url + item.name"
               class="flex xl:hidden cursor-pointer text-gray-600 text-base leading-3 tracking-normal mt-2 py-3 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none"
             >
-              <div class="flex items-center">
-                <span class="leading-6 ml-2 font-bold"> Content Menu </span>
-              </div>
+              <router-link :to="item.url" class="w-full">
+                <div class="flex items-center">
+                  <span class="leading-6 ml-2 font-bold">
+                    {{ item.name }}
+                  </span>
+                </div>
+              </router-link>
             </li>
           </ul>
           <svg
