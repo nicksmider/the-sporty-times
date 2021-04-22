@@ -32,7 +32,7 @@ export default {
   methods: {
     setUser(user) {
       this.$store.commit("setUser", user);
-      this.$router.push("/");
+      this.$router.go(-1);
     }
   }
 };

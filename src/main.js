@@ -9,13 +9,15 @@ import { routes } from "./routes";
 import {
   faPodcast,
   faSquare,
-  faCommentAlt
+  faCommentAlt,
+  faCheckDouble
 } from "@fortawesome/free-solid-svg-icons";
 import "tailwindcss/tailwind.css";
 
 library.add(faPodcast);
 library.add(faSquare);
 library.add(faCommentAlt);
+library.add(faCheckDouble);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
@@ -30,6 +32,7 @@ const store = new Vuex.Store({
   state: {
     loggedInUser: null,
     followingItems: [],
+    podcastStatus: [false, false, false, false],
     users: [
       {
         name: "Nick",
@@ -39,7 +42,8 @@ const store = new Vuex.Store({
           { url: "/", name: "Pittsburgh FB" },
           { url: "/", name: "Penguins" },
           { url: "/", name: "NFL" }
-        ]
+        ],
+        podcastStatus: [false, false, false, true]
       },
       {
         name: "Rylee",
@@ -48,7 +52,8 @@ const store = new Vuex.Store({
           { url: "/", name: "Celtics" },
           { url: "/", name: "MLB" },
           { url: "/", name: "NBA" }
-        ]
+        ],
+        podcastStatus: [true, false, false, true]
       },
       {
         name: "Dave",
@@ -56,7 +61,8 @@ const store = new Vuex.Store({
           { url: "/", name: "Pirates" },
           { url: "/", name: "Steelers" },
           { url: "/", name: "Penguins" }
-        ]
+        ],
+        podcastStatus: [false, false, false, false]
       },
       {
         name: "Mary",
@@ -64,7 +70,8 @@ const store = new Vuex.Store({
           { url: "/", name: "Golf" },
           { url: "/", name: "Pirates" },
           { url: "/", name: "MLB" }
-        ]
+        ],
+        podcastStatus: [true, true, true, true]
       }
     ]
   },
@@ -73,6 +80,7 @@ const store = new Vuex.Store({
       // mutate state
       state.loggedInUser = user.name;
       state.followingItems = user.followingItems;
+      state.podcastStatus = user.podcastStatus;
     }
   },
   actions: {},
