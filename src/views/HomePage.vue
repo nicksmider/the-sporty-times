@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import MainPageHolder from '../components/MainPageHolder';
+import MainPageHolder from "../components/MainPageHolder";
 
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   components: {
-    MainPageHolder,
+    MainPageHolder
   }
-}
+};
 </script>

@@ -2,10 +2,14 @@
   <div>
     <!-- Navigation starts -->
     <div class="h-16 absolute w-full bg-custom-gray mx-0 left-0 z-0"></div>
-    <nav class="h-16 w-full mx-auto bg-custom-gray border-b border-gray-900 shadow relative z-20 text-white">
+    <nav
+      class="h-16 w-full mx-auto bg-custom-gray border-b border-gray-900 shadow relative z-20 text-white"
+    >
       <div class="container h-16 flex items-center justify-between mx-auto">
         <div class="flex items-center">
-          <div class="rounded-full relative py-3 pr-3 flex justify-end text-white">
+          <div
+            class="rounded-full relative py-3 pr-3 flex justify-end text-white"
+          >
             <input
               type="text"
               class="bg-white rounded text-black z-40 h-6 focus:outline-none text-xs w-0 transition duration-150 ease-in-out absolute left-0"
@@ -24,43 +28,29 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path
-                stroke="none"
-                d="M0 0h24v24H0z"
-              ></path>
-              <circle
-                cx="10"
-                cy="10"
-                r="7"
-              ></circle>
-              <line
-                x1="21"
-                y1="21"
-                x2="15"
-                y2="15"
-              ></line>
+              <path stroke="none" d="M0 0h24v24H0z"></path>
+              <circle cx="10" cy="10" r="7"></circle>
+              <line x1="21" y1="21" x2="15" y2="15"></line>
             </svg>
           </div>
-          <div class="">{{loggedInUser}}</div>
+          <div class="">{{ loggedInUser }}</div>
           <div
             aria-haspopup="true"
             class="cursor-pointer h-full sm:flex items-center justify-end hidden relative"
             @click="dropdownHandler($event)"
           >
-
-            <ul class="p-2 w-40 border-r bg-white rounded z-40 absolute shadow hidden custom-drop">
+            <ul
+              class="p-2 w-40 border-r bg-white rounded z-40 absolute shadow hidden custom-drop"
+            >
               <div class="arrow-up arrow-drop absolute"></div>
               <li
                 v-for="item in dropDownItems"
                 :key="item.url + item.name"
                 class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none"
               >
-
-                <router-link
-                  :to="item.url"
-                  class="ml-2"
-                > {{item.name}} </router-link>
-
+                <router-link :to="item.url" class="ml-2">
+                  {{ item.name }}
+                </router-link>
               </li>
             </ul>
             <div class="text-gray-600 pl-2">
@@ -76,10 +66,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                />
+                <path stroke="none" d="M0 0h24v24H0z" />
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </div>
@@ -95,13 +82,21 @@
           class="cursor-pointer h-full xl:flex items-center justify-end hidden relative"
           @click="dropdownHandler($event)"
         >
-          <div class="bg-white mb-0 border border-gray-300 h-8 w-24 rounded-full flex items-center justify-center">
-            <span class="text-xs text-gray-800 font-normal">Invite Friends</span>
+          <div
+            class="bg-white mb-0 border border-gray-300 h-8 w-24 rounded-full flex items-center justify-center"
+          >
+            <span class="text-xs text-gray-800 font-normal"
+              >Invite Friends</span
+            >
           </div>
         </div>
         <div class="visible xl:hidden flex items-center text-white">
-          <ul class="p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 hidden">
-            <li class="flex xl:hidden cursor-pointer text-gray-600 text-base leading-3 tracking-normal mt-2 py-3 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none">
+          <ul
+            class="p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 hidden"
+          >
+            <li
+              class="flex xl:hidden cursor-pointer text-gray-600 text-base leading-3 tracking-normal mt-2 py-3 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none"
+            >
               <div class="flex items-center">
                 <span class="leading-6 ml-2 font-bold"> Content Menu </span>
               </div>
@@ -122,27 +117,11 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path
-              stroke="none"
-              d="M0 0h24v24H0z"
-            ></path>
-            <line
-              x1="4"
-              y1="8"
-              x2="20"
-              y2="8"
-            ></line>
-            <line
-              x1="4"
-              y1="16"
-              x2="20"
-              y2="16"
-            ></line>
+            <path stroke="none" d="M0 0h24v24H0z"></path>
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
           </svg>
-          <div
-            class="hidden close-m-menu"
-            @click="MenuHandler($event, false)"
-          >
+          <div class="hidden close-m-menu" @click="MenuHandler($event, false)">
             <svg
               aria-label="Close"
               :xmlns="xmlns"
@@ -155,22 +134,9 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path
-                stroke="none"
-                d="M0 0h24v24H0z"
-              />
-              <line
-                x1="18"
-                y1="6"
-                x2="6"
-                y2="18"
-              />
-              <line
-                x1="6"
-                y1="6"
-                x2="18"
-                y2="18"
-              />
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
             </svg>
           </div>
         </div>
@@ -181,7 +147,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
   name: "NavigationBar",
@@ -190,18 +156,16 @@ export default {
       xmlns: "http://www.w3.org/2000/svg",
       menuOpen: false,
       dropDownItems: [
-        { url: '/', name: 'Your Account' },
-        { url: '/switch', name: 'Switch Profiles' },
-        { url: '/', name: 'Saved Stories' },
-        { url: '/', name: 'Manage Feed' },
-        { url: '/', name: 'Log Out' },
+        { url: "/", name: "Your Account" },
+        { url: "/switch", name: "Switch Profiles" },
+        { url: "/", name: "Saved Stories" },
+        { url: "/", name: "Manage Feed" },
+        { url: "/", name: "Log Out" }
       ]
     };
   },
   computed: {
-    ...mapState([
-      'loggedInUser'
-    ])
+    ...mapState(["loggedInUser"])
   },
   methods: {
     dropdownHandler(event) {
@@ -210,9 +174,15 @@ export default {
     },
     MenuHandler(el, val) {
       this.menuOpen = val;
-      let MainList = el.currentTarget.parentElement.getElementsByTagName("ul")[0];
-      let closeIcon = el.currentTarget.parentElement.getElementsByClassName("close-m-menu")[0];
-      let showIcon = el.currentTarget.parentElement.getElementsByClassName("show-m-menu")[0];
+      let MainList = el.currentTarget.parentElement.getElementsByTagName(
+        "ul"
+      )[0];
+      let closeIcon = el.currentTarget.parentElement.getElementsByClassName(
+        "close-m-menu"
+      )[0];
+      let showIcon = el.currentTarget.parentElement.getElementsByClassName(
+        "show-m-menu"
+      )[0];
       if (val) {
         MainList.classList.remove("hidden");
         el.currentTarget.classList.add("hidden");
@@ -222,8 +192,8 @@ export default {
         MainList.classList.add("hidden");
         el.currentTarget.classList.add("hidden");
       }
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>

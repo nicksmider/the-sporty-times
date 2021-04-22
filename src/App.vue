@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import NavigationBar from './components/NavigationBar.vue';
-import TopicBar from './components/TopicBar';
-import { mapState } from 'vuex';
+import NavigationBar from "./components/NavigationBar.vue";
+import TopicBar from "./components/TopicBar";
+import { mapState } from "vuex";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NavigationBar,
     TopicBar
@@ -22,14 +22,13 @@ export default {
   created() {
     if (!this.loggedInUser) {
       const user = this.users[0];
-      this.$store.commit('setUser', user);
+      this.$store.commit("setUser", user);
     }
   },
   computed: {
-    ...mapState(['loggedInUser', 'users']),
-  },
-}
+    ...mapState(["loggedInUser", "users"])
+  }
+};
 </script>
 
-<style>
-</style>
+<style></style>
