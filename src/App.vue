@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="mx-6 md:mx-12 lg:mx-16 xl:mx-28">
+      <NavigationBar />
+      <TopicBar />
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavigationBar from './components/NavigationBar.vue';
+import TopicBar from './components/TopicBar';
+import { mapState } from 'vuex';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    NavigationBar,
+    TopicBar
+  },
+  created() {
+    if (!this.loggedInUser) {
+      const user = this.users[0];
+      this.$store.commit('setUser', user);
+    }
+  },
+  computed: {
+    ...mapState(['loggedInUser', 'users']),
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
